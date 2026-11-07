@@ -3,6 +3,7 @@ using HW_L5_01_Algorithm.Task2__PrimeNumber_;
 using HW_L5_01_Algorithm.Task3_LongestSubArray_;
 using HW_L5_01_Algorithm.Task4_TargerNumber_;
 using HW_L5_01_Algorithm.Task5;
+using HW_L5_01_Algorithm.Task6_uniqe_char_;
 using SharedCore;
 
 namespace HW_L5_01_Algorithm
@@ -38,11 +39,18 @@ namespace HW_L5_01_Algorithm
 
 
             //task5 : exchange number to word
-            Console.WriteLine("Enter a number between 1 to 9999: ") ;
+            Console.WriteLine("Enter a number between 1 to 9999: ");
             int numberToChange = (int)GetInputs.getInputNum();
             ExchangeNumToChar exchangeNumToChar = new ExchangeNumToChar();
-            string word=exchangeNumToChar.NumToChar(numberToChange);
+            string word = exchangeNumToChar.NumToChar(numberToChange);
             Console.WriteLine($"{numberToChange} = {word}");
+
+            //task6 : find uniqe char
+            UniqueChar uniqueChar = new UniqueChar();
+            Console.WriteLine("Please enter an string: ");
+            string text = Console.ReadLine();
+            Console.Write("The first unique char is: ");
+            uniqueChar.FirstUniqueCharacterIndex(text);
         }
     }
 }
