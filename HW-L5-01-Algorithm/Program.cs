@@ -2,6 +2,7 @@
 using HW_L5_01_Algorithm.Task2__PrimeNumber_;
 using HW_L5_01_Algorithm.Task3_LongestSubArray_;
 using HW_L5_01_Algorithm.Task4_TargerNumber_;
+using HW_L5_01_Algorithm.Task5;
 using SharedCore;
 
 namespace HW_L5_01_Algorithm
@@ -10,30 +11,38 @@ namespace HW_L5_01_Algorithm
     {
         static void Main(string[] args)
         {
-            ////task 1 : Fibonacci
-            //Fibonacci fibonacci = new Fibonacci();
-            //long inputNumber = fibonacci.getInput();
-            //long result = fibonacci.calculateFibonacci(inputNumber);
-            //fibonacci.printResult(result);
-            //Console.WriteLine();
+            //task 1 : Fibonacci
+            Fibonacci fibonacci = new Fibonacci();
+            long inputNumber = fibonacci.getInput();
+            long result = fibonacci.calculateFibonacci(inputNumber);
+            fibonacci.printResult(result);
+            Console.WriteLine();
 
-            ////task 2 : Prime Number
-            //PrimeNumber primeNumber = new PrimeNumber();
-            //long inputNumPrime = primeNumber.getInput();
-            //bool resultPrime = primeNumber.isPrime(inputNumPrime);
-            //primeNumber.printResult();
+            //task 2 : Prime Number
+            PrimeNumber primeNumber = new PrimeNumber();
+            long inputNumPrime = primeNumber.getInput();
+            bool resultPrime = primeNumber.isPrime(inputNumPrime);
+            primeNumber.printResult();
 
-            ////task3 : longest subArray
-            //LongestIncreasingSubArray longestIncreasingSubArray = new LongestIncreasingSubArray();
-            //int[] inputArray = longestIncreasingSubArray.GetInputArray();
-            //int maxResult = longestIncreasingSubArray.GetLongestIncreasingSubArray(inputArray);
-            //Console.WriteLine($"The max Length is {maxResult}");
+            //task3 : longest subArray
+            LongestIncreasingSubArray longestIncreasingSubArray = new LongestIncreasingSubArray();
+            int[] inputArray = longestIncreasingSubArray.GetInputArray();
+            int maxResult = longestIncreasingSubArray.GetLongestIncreasingSubArray(inputArray);
+            Console.WriteLine($"The max Length is {maxResult}");
 
             //task4 : findTarget
             int[] arrayNum = GetInputs.GetInputArray();
             long targetNum = GetInputs.getInputNum();
             FindTarget findTarget = new FindTarget();
             findTarget.printResult(findTarget.HasTwoSum(arrayNum, targetNum));
+
+
+            //task5 : exchange number to word
+            Console.WriteLine("Enter a number between 1 to 9999: ") ;
+            int numberToChange = (int)GetInputs.getInputNum();
+            ExchangeNumToChar exchangeNumToChar = new ExchangeNumToChar();
+            string word=exchangeNumToChar.NumToChar(numberToChange);
+            Console.WriteLine($"{numberToChange} = {word}");
         }
     }
 }
