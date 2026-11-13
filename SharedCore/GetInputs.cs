@@ -70,5 +70,21 @@
             }
             return inputNum;
         }
+        public static int getInputNumInt()
+        {
+            int inputNumInt;
+            while (true)
+            {
+                Console.WriteLine("Please enter a number: ");
+                string input = Console.ReadLine();
+                if (int.TryParse(input, out inputNumInt))
+                {
+                    break;
+                }
+
+                Console.WriteLine("Please enter a valid number, it should be an integer! ");
+            }
+            return inputNumInt;
+        }
     }
 }

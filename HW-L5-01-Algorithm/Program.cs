@@ -4,6 +4,7 @@ using HW_L5_01_Algorithm.Task3_LongestSubArray_;
 using HW_L5_01_Algorithm.Task4_TargerNumber_;
 using HW_L5_01_Algorithm.Task5;
 using HW_L5_01_Algorithm.Task6_uniqe_char_;
+using HW_L5_01_Algorithm.Task7_ReverseNumber_;
 using SharedCore;
 
 namespace HW_L5_01_Algorithm
@@ -51,6 +52,15 @@ namespace HW_L5_01_Algorithm
             string text = Console.ReadLine();
             Console.Write("The first unique char is: ");
             uniqueChar.FirstUniqueCharacterIndex(text);
+
+            //task7 : reverse number
+            ReverseNumber reverseNumber = new ReverseNumber();
+            int numberToReverse = GetInputs.getInputNumInt();
+            int reverseNum = reverseNumber.Reverse(numberToReverse);
+            Console.WriteLine($"Revese of the number is: {reverseNum}");
+            
+
+
         }
     }
 }
