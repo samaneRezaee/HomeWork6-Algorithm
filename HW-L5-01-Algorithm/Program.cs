@@ -5,6 +5,7 @@ using HW_L5_01_Algorithm.Task4_TargerNumber_;
 using HW_L5_01_Algorithm.Task5;
 using HW_L5_01_Algorithm.Task6_uniqe_char_;
 using HW_L5_01_Algorithm.Task7_ReverseNumber_;
+using HW_L5_01_Algorithm.Task8_isTriangle_;
 using SharedCore;
 
 namespace HW_L5_01_Algorithm
@@ -58,8 +59,13 @@ namespace HW_L5_01_Algorithm
             int numberToReverse = GetInputs.getInputNumInt();
             int reverseNum = reverseNumber.Reverse(numberToReverse);
             Console.WriteLine($"Revese of the number is: {reverseNum}");
-            
 
+            //task8 : findTriangle
+            FindTriangle findTriangle = new FindTriangle();
+            int[] triangleArray = GetInputs.GetInputArray();
+            if (findTriangle.CanFormTriangle(triangleArray))
+                Console.WriteLine("true");
+            else Console.WriteLine("false");
 
         }
     }
