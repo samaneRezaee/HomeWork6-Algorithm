@@ -86,5 +86,13 @@
             }
             return inputNumInt;
         }
+        public static string getInputString()
+        {
+            string inputString;
+
+            Console.WriteLine("Please enter an string: ");
+            inputString = Console.ReadLine();
+            return inputString;
+        }
     }
 }

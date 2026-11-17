@@ -6,6 +6,7 @@ using HW_L5_01_Algorithm.Task5;
 using HW_L5_01_Algorithm.Task6_uniqe_char_;
 using HW_L5_01_Algorithm.Task7_ReverseNumber_;
 using HW_L5_01_Algorithm.Task8_isTriangle_;
+using HW_L5_01_Algorithm.Task9;
 using SharedCore;
 
 namespace HW_L5_01_Algorithm
@@ -66,6 +67,15 @@ namespace HW_L5_01_Algorithm
             if (findTriangle.CanFormTriangle(triangleArray))
                 Console.WriteLine("true");
             else Console.WriteLine("false");
+
+            //task9 : Check input of {} or () or []
+            CheckStringIsValid checkStringIsValid = new CheckStringIsValid();
+            Console.WriteLine("Input should be {},(),[]");
+            string s = GetInputs.getInputString();
+            if (checkStringIsValid.IsValid(s))
+                Console.WriteLine("true");
+            else
+                Console.WriteLine("false");
 
         }
     }
