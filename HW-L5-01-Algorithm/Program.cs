@@ -1,4 +1,5 @@
-﻿using HW_L5_01_Algorithm.Task1_Fibonacci_series_;
+﻿using HW_L5_01_Algorithm.Task_10_Max_;
+using HW_L5_01_Algorithm.Task1_Fibonacci_series_;
 using HW_L5_01_Algorithm.Task2__PrimeNumber_;
 using HW_L5_01_Algorithm.Task3_LongestSubArray_;
 using HW_L5_01_Algorithm.Task4_TargerNumber_;
@@ -76,6 +77,11 @@ namespace HW_L5_01_Algorithm
                 Console.WriteLine("true");
             else
                 Console.WriteLine("false");
+
+            //task10 : max product
+            MaxProduct maxProduct = new MaxProduct();
+            int[] intArrays = GetInputs.GetInputArray();
+           Console.WriteLine($"Maximum Value is: { maxProduct.MaximumProduct(intArrays)}");
 
         }
     }
